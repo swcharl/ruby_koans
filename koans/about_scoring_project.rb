@@ -33,7 +33,7 @@ def score(dice)
   score = 0
   
   (1..6).each do |n|
-    count = dice.inject(0) { |count, d| d == n ? count + 1 : count }
+    count = dice.count(n)
     
     while count > 0 do
       if count >= 3 then
